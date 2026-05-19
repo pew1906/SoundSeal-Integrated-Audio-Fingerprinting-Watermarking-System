@@ -209,7 +209,7 @@ SoundFile
 
 # Conclusion
 
-This project demonstrates a secure and efficient framework for integrating audio fingerprinting and watermarking using PERTH and AUDF methods. The system provides reliable audio authentication and copyright protection while preserving audio quality.
+This project demonstrates a secure and efficient framework for integrating audio fingerprinting and watermarking using PERTH and AUDFIFY methods. The system provides reliable audio authentication and copyright protection while preserving audio quality.
 
 ---
 
