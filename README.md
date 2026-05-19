@@ -9,7 +9,7 @@ The system combines:
 * **Audio Fingerprinting** – to uniquely identify audio content based on extracted features.
 * **Digital Watermarking** – to embed hidden ownership or authentication data inside audio signals.
 * **PERTH Algorithm** – used for secure and efficient watermark embedding.
-* **AUDF Framework** – used for audio feature extraction and fingerprint generation.
+* **AUDIFY Framework** – used for audio feature extraction and fingerprint generation.
 
 This integrated approach improves media security, prevents unauthorized distribution, and enables reliable audio tracking.
 
