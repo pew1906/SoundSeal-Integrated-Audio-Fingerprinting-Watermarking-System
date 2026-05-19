@@ -36,7 +36,6 @@ This integrated approach improves media security, prevents unauthorized distribu
 * Librosa
 * Matplotlib
 * SoundFile / PyDub
-* Signal Processing Techniques
 
 ---
 
