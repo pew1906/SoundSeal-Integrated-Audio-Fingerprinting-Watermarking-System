@@ -25,6 +25,8 @@ This integrated approach improves media security, prevents unauthorized distribu
 * Supports WAV audio processing
 * Visualization of waveform and spectrogram
 * Efficient signal processing pipeline
+* Signal Processing Techniques
+
 
 ---
 
