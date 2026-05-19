@@ -1,4 +1,4 @@
-# Integrated Audio Fingerprinting and Watermarking using PERTH and AUDF
+# Integrated Audio Fingerprinting and Watermarking using PERTH and AUDIFY
 
 ## Overview
 
