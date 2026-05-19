@@ -1,78 +1,124 @@
-# Integrated Audio Fingerprinting and Watermarking using PERTH and AUDIFY
+# 🎵 Integrated Audio Fingerprinting and Watermarking using PERTH & AUDIFY
 
-## Overview
-
-This project presents an integrated system for **audio fingerprinting** and **digital watermarking** using **PERTH** and **AUDF** techniques. The main objective is to provide secure audio authentication, copyright protection, and content identification through robust signal processing methods.
-
-The system combines:
-
-* **Audio Fingerprinting** – to uniquely identify audio content based on extracted features.
-* **Digital Watermarking** – to embed hidden ownership or authentication data inside audio signals.
-* **PERTH Algorithm** – used for secure and efficient watermark embedding.
-* **AUDIFY Framework** – used for audio feature extraction and fingerprint generation.
-
-This integrated approach improves media security, prevents unauthorized distribution, and enables reliable audio tracking.
+> A secure and intelligent framework for **audio authentication**, **copyright protection**, and **content identification** using advanced signal processing techniques.
 
 ---
 
-# Features
+## 📌 Overview
 
-* Secure audio watermark embedding and extraction
-* Robust audio fingerprint generation
-* Audio ownership verification
-* Tamper detection and authentication
-* Noise-resistant fingerprint matching
-* Supports WAV audio processing
-* Visualization of waveform and spectrogram
-* Efficient signal processing pipeline
-* Signal Processing Techniques
+This project presents an integrated system that combines **Audio Fingerprinting** and **Digital Watermarking** using the **PERTH** algorithm and **AUDIFY** framework.
 
+The primary goal is to provide:
 
----
+* 🔐 Secure audio authentication
+* 🛡️ Copyright protection
+* 🎧 Reliable audio identification
+* 🚫 Protection against unauthorized duplication and tampering
 
-# Technologies Used
-
-* **Python 3.x**
-* NumPy
-* SciPy
-* Librosa
-* Matplotlib
-* SoundFile / PyDub
+The system extracts unique audio fingerprints and embeds invisible watermark data into audio files while preserving audio quality.
 
 ---
 
-# System Architecture
+## ✨ Key Features
+
+✅ Secure watermark embedding & extraction
+✅ Robust audio fingerprint generation
+✅ Audio ownership verification
+✅ Tamper detection mechanism
+✅ Noise-resistant fingerprint matching
+✅ WAV audio file support
+✅ Waveform & spectrogram visualization
+✅ Efficient signal processing pipeline
+✅ Lightweight and scalable architecture
+
+---
+
+## 🧠 Core Technologies
+
+| Technology            | Purpose                   |
+| --------------------- | ------------------------- |
+| **Python 3.x**        | Main programming language |
+| **NumPy**             | Numerical computations    |
+| **SciPy**             | Signal processing         |
+| **Librosa**           | Audio analysis            |
+| **Matplotlib**        | Data visualization        |
+| **PyDub / SoundFile** | Audio handling            |
+
+---
+
+# 🏗️ System Architecture
 
 ```text
-Input Audio
-     |
-     v
-Feature Extraction (AUDF)
-     |
-     v
-Fingerprint Generation
-     |
-     v
-Watermark Embedding (PERTH)
-     |
-     v
-Watermarked Audio Output
-     |
-     v
-Verification & Extraction
+          ┌─────────────────┐
+          │   Input Audio   │
+          └────────┬────────┘
+                   │
+                   ▼
+      ┌─────────────────────────┐
+      │ Feature Extraction      │
+      │       (AUDIFY)          │
+      └────────┬────────────────┘
+               │
+               ▼
+      ┌─────────────────────────┐
+      │ Fingerprint Generation  │
+      └────────┬────────────────┘
+               │
+               ▼
+      ┌─────────────────────────┐
+      │ Watermark Embedding     │
+      │        (PERTH)          │
+      └────────┬────────────────┘
+               │
+               ▼
+      ┌─────────────────────────┐
+      │ Watermarked Audio Output│
+      └────────┬────────────────┘
+               │
+               ▼
+      ┌─────────────────────────┐
+      │ Verification & Recovery │
+      └─────────────────────────┘
 ```
 
+---
 
-# Installation
+# 📂 Project Structure
 
-## Clone the Repository
+```text
+Integrated-Audio-Fingerprinting-Watermarking/
+│
+├── dataset/                  # Input audio files
+├── output/                   # Watermarked audio outputs
+├── fingerprints/             # Generated fingerprints
+├── watermark/                # Watermark data
+│
+├── src/
+│   ├── preprocessing.py      # Audio preprocessing
+│   ├── fingerprint.py        # Fingerprint generation
+│   ├── watermark.py          # Watermark embedding/extraction
+│   ├── verification.py       # Audio verification
+│   └── main.py               # Main execution file
+│
+├── requirements.txt
+├── README.md
+└── LICENSE
+```
+
+---
+
+# ⚙️ Installation
+
+## 1️⃣ Clone the Repository
 
 ```bash
 git clone https://github.com/your-username/Integrated-Audio-Fingerprinting-Watermarking.git
 cd Integrated-Audio-Fingerprinting-Watermarking
 ```
 
-## Install Dependencies
+---
+
+## 2️⃣ Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -80,13 +126,15 @@ pip install -r requirements.txt
 
 ---
 
-# Usage
+# ▶️ Usage
 
-## Run the Main Program
+## Run Complete System
 
 ```bash
 python src/main.py
 ```
+
+---
 
 ## Generate Audio Fingerprint
 
@@ -94,11 +142,15 @@ python src/main.py
 python src/fingerprint.py
 ```
 
+---
+
 ## Embed Watermark
 
 ```bash
 python src/watermark.py
 ```
+
+---
 
 ## Verify Audio Authenticity
 
@@ -108,83 +160,101 @@ python src/verification.py
 
 ---
 
-# Working Principle
+# 🔍 Working Principle
 
-## 1. Audio Preprocessing
+## 🎚️ 1. Audio Preprocessing
 
-The input audio signal is normalized and converted into a suitable format for analysis.
+The input audio signal is:
 
-## 2. Fingerprint Generation (AUDF)
+* Normalized
+* Filtered
+* Converted into analyzable format
 
-The AUDF module extracts unique audio features such as:
+This ensures consistent and accurate processing.
+
+---
+
+## 🎵 2. Fingerprint Generation (AUDIFY)
+
+The AUDIFY module extracts unique audio features such as:
 
 * Spectral peaks
 * Frequency components
 * Temporal patterns
 * Acoustic descriptors
 
-These features are converted into compact fingerprints used for matching and identification.
+These features are converted into compact fingerprints for matching and identification.
 
-## 3. Watermark Embedding (PERTH)
+---
 
-The PERTH algorithm embeds hidden information into the audio signal while maintaining audio quality.
+## 🔐 3. Watermark Embedding (PERTH)
 
-Properties:
+The PERTH algorithm embeds hidden information inside the audio signal while maintaining high audio quality.
+
+### Key Properties
 
 * Imperceptibility
 * Robustness
 * Security
-* Resistance to compression and noise
-
-## 4. Verification
-
-The system extracts the watermark and compares generated fingerprints with stored fingerprints to verify authenticity.
+* Resistance to compression & noise
 
 ---
 
-# Applications
+## ✅ 4. Verification
 
-* Copyright protection
-* Music identification systems
-* Audio authentication
-* Broadcast monitoring
-* Piracy detection
-* Secure media distribution
-* Forensic audio analysis
+The system:
 
----
+* Extracts the hidden watermark
+* Generates fingerprints
+* Compares with stored fingerprints
 
-# Advantages
-
-* High security and reliability
-* Fast audio matching
-* Robust against signal distortion
-* Efficient watermark recovery
-* Scalable for large audio databases
+to verify authenticity and detect tampering.
 
 ---
 
-# Future Enhancements
+# 🌍 Applications
 
-* Real-time audio monitoring
-* Deep learning-based fingerprint extraction
-* Multi-format audio support
-* Cloud-based fingerprint database
-* Mobile application integration
+🎧 Music Identification Systems
+📡 Broadcast Monitoring
+🛡️ Copyright Protection
+🔍 Forensic Audio Analysis
+📁 Secure Media Distribution
+🚫 Piracy Detection
+🔐 Audio Authentication Systems
 
 ---
 
-# Sample Output
+# 🚀 Advantages
+
+✔️ High security and reliability
+✔️ Fast fingerprint matching
+✔️ Robust against distortion and noise
+✔️ Efficient watermark recovery
+✔️ Scalable for large audio databases
+
+---
+
+# 🔮 Future Enhancements
+
+* 🤖 Deep learning-based fingerprint extraction
+* ☁️ Cloud-based fingerprint database
+* 📱 Mobile application integration
+* 🎙️ Real-time audio monitoring
+* 🎵 Multi-format audio support
+
+---
+
+# 📊 Sample Output
 
 ```text
-Fingerprint Generated Successfully
-Watermark Embedded Successfully
-Verification Result: Authentic Audio
+[INFO] Fingerprint Generated Successfully
+[INFO] Watermark Embedded Successfully
+[INFO] Verification Result: Authentic Audio
 ```
 
 ---
 
-# Requirements
+# 📋 Requirements
 
 ```text
 Python >= 3.8
@@ -196,26 +266,63 @@ PyDub
 SoundFile
 ```
 
----
+Install dependencies using:
 
-# Research Objectives
-
-* To integrate watermarking and fingerprinting into a single framework
-* To improve audio security and ownership protection
-* To achieve robust and accurate audio identification
-* To reduce tampering and unauthorized duplication
+```bash
+pip install -r requirements.txt
+```
 
 ---
 
-# Conclusion
+# 🎯 Research Objectives
 
-This project demonstrates a secure and efficient framework for integrating audio fingerprinting and watermarking using PERTH and AUDFIFY methods. The system provides reliable audio authentication and copyright protection while preserving audio quality.
-
----
-
-# Contributors
-
-* Prachi Kumar
+* Integrate watermarking and fingerprinting into a unified framework
+* Improve audio ownership protection
+* Enable robust and accurate audio identification
+* Prevent tampering and unauthorized duplication
 
 ---
 
+# 📈 Future Scope
+
+This project can be extended into:
+
+* AI-powered copyright monitoring systems
+* Streaming platform authentication
+* Blockchain-based audio ownership verification
+* Enterprise media protection systems
+
+---
+
+# 👩‍💻 Contributor
+
+### Prachi Kumar
+
+AI & Data Science Undergraduate
+Passionate about Machine Learning, Signal Processing & Intelligent Systems
+
+---
+
+# 📜 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+# ⭐ Support
+
+If you found this project useful:
+
+🌟 Star the repository
+🍴 Fork the project
+📢 Share it with others
+
+---
+
+# 🔗 GitHub Repository
+
+Replace with your actual repository link:
+
+```text
+https://github.com/your-username/Integrated-Audio-Fingerprinting-Watermarking
+```
